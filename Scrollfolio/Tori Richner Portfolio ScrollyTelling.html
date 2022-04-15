@@ -1,0 +1,143 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="stylesheet" href="./scrollfolio css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tori Richner</title>
+
+        <script src="https://unpkg.com/intersection-observer"></script>
+        <script src="https://unpkg.com/scrollama"></script>
+
+        <style type="text/css">
+            html,body{
+                width: 100%;
+                height: auto;
+                font-family: verdana, sans-serif;
+                color: #555;
+                background-color: #fff;
+                font-size: 1.3em;
+                overflow-x: hidden;
+            }
+            section{
+                height: 100%;
+            }
+            div{
+                height: 100%;
+                max-width: 1000px;
+                margin: 50px auto;
+                text-align: center;
+                padding: 50px;
+            }
+            div.step{
+                background: #fff;
+                color: #fff;
+                border-radius: 25px;
+                font-size: 1em;
+            }
+            div.step.active{
+			    background: darkolivegreen;
+			    transition: 1s linear all;
+            }
+        
+            div.step.inactive{
+			    background: #fff;
+			    transition: 1s linear all;
+            }
+            footer{
+                background-color: darkolivegreen;
+                height: 800px;
+                width: 100%;
+                font-family: verdana, sans-serif;
+                color: #fff;
+                padding-top: 1em;
+                text-align: center;
+                padding-top: 400px;
+            }
+        </style>
+    </head>
+    <body>
+<section>
+    <div><h1>Tori Richner</h1>
+        <h2>Baltimore based Graphic and UI Designer</h2></div>
+    <div class="step"><p>When I first began my graphic design adventure I only had a little self taught knowledge of Photoshop and was beginning to learn about 
+        Illustrator and the importance of vector vs. raster. 
+        I would use existing businesses and create new logos and designs to help improve my knowledge of Photoshop.
+        I created this Game Boy Color image as my first project in Illustrator, it helped me learn how to use the pen tool and other tools within Illustrator.
+    </p>
+</div>
+<div>
+    <img src="./Images/GB Poster Final for Web.jpg"  height="800px" width="auto">
+</div>
+    <div class="step"><p>After graduating from AACC with my Associates, I moved on to UMBC where I became a Coordinator of Graphic Design for UMBC's Student Government Association.
+        I was given the opportunity to create various social media designs for many different events.
+    </p></div>
+    <div>
+        <img src="./Images/sga/Newsletter Logo.png" height="200px" width="auto">
+        <img src="./Images/sga/Newsletter Header.png" height="200px" width="auto">
+        <img src="./Images/sga/Virtual Dinner with Friends_people-01.jpg" height="450px" width="auto">
+        <img src="./Images/sga/Thank You Graphic-01.jpg" height="450px" width="auto"> <br>
+        <img src="./Images/sga/Pledge to Vote-02.jpg" height="300" width="auto">
+        <img src="./Images/sga/Why does voting matter-03.jpg" height="300" width="auto">
+        <img src="./Images/sga/Voting Checklist Eng-04.jpg" height="300" width="auto">
+        <img src="./Images/sga/Voting Checklist Spn-05.jpg" height="300" width="auto"> <br>
+        <img src="./Images/sga/(1)Thankful Thanksgiving Question-02.jpg" height="200px" width="auto">
+        <img src="./Images/sga/Coffee & Conversation.jpg" height="200px" width="auto">
+        <img src="./Images/sga/Deconstruct and Discuss-01.jpg" height="200px" width="auto"> 
+        
+      
+    </div>
+    <div class="step"><p>During this time, I was also given the privilege of creating the logo for a friend's restaurant that was in the works of opening.</p></div>
+    <div>
+        <img src="./Images/coelum.JPG" height="200px" width="auto">
+    </div>
+    <div class="step"><p>I continued honing my design skills with in class projects.</p></div>
+    <div>
+        <img src="./Images/event posters/Tori Richner_Event Poster 3_Ansel Adams.jpg" height="500px" width="auto"><br>
+        <img src="./Images/event posters/Tori Richner Event Poster 2_Hakusai3.jpg" height="500px" width="auto">
+        <img src="./Images/event posters/hakusai poster 2.jpg" height="500px" width="auto">
+        <img src="./Images/cookbook_cropped_Page_08.jpg" height="400px" width="100%">
+    </div>
+    <div class="step"><p>where I began learning more about UI/UX design and had my first project in Adobe XD, a recreation of a website that exists.</p></div>
+    <div>
+        <img src="./Images/adobe xd project.JPG" height="700px" width="auto">
+    </div>
+    <div class="step"><p>This started in furthering my interest in interface, interactive, web, and mobile design which started my app, Root Cellar! This is an app idea I had based off
+        the common issues myself and others have faced especially when living with others and sharing a communal space. With this app you can track the items in your kitchen
+    and have live updates of changes that you or others connected to your household can make. </p></div>
+   <div>
+       <img src="./Images/root cellar/Root Cellar for Portfolio_Behance-01.png" height="1080px" width="auto">
+       <img src="./Images/root cellar/Root Cellar for Portfolio_Behance-02.png" height="1080px" width="auto">
+   </div>
+    <div class="step"><p>Now in my last semester of obtaining my BA with a concentration in Graphic Design, I'm continuing to hone and improve my skills
+        and plan on pursuing a masters in UI/UX design. This short portfolio will be the first of many coding projects as I continue improving to be an inclusive designer. 
+        I will update and improve this portfolio as my skills do to create a site that grows as I do.
+    </p></div>
+</section>
+        <script type="text/javascript">
+        const scroller = scrollama();
+
+        scroller
+            .setup({
+                step: '.step',
+            })
+            .onStepEnter((response) => {
+                console.log(response)
+                response.element.classList.remove("inactive");
+                response.element.classList.add("active");
+            })
+            .onStepExit((response) => {
+                console.log (response)
+                response.element.classList.remove("active");
+                response.element.classList.add("inactive");
+            });
+     
+    
+            window.addEventListener("resize", scroller.resize);
+         </script>
+        <footer>
+         <h1>Thank you for helping me grow</h1>
+        </footer>
+    </body>
+    </html>
